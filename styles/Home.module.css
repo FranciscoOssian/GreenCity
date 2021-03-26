@@ -1,0 +1,44 @@
+/* font-family: 'Cookie', cursive; */
+@import url('https://fonts.googleapis.com/css?family=Cookie&display=swap');
+
+/* font-family: 'Open Sans', sans-serif; */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+
+.app{
+    background-image: url("https://raw.githubusercontent.com/FranciscoOssian/front-end-intern-test/master/assets/04-BG.png");
+    margin: 0%;
+    padding: 0%;
+    height: 100vh; /* For 100% screen height */
+    width:  100vw; /* For 100% screen width */
+}
+
+
+.head{
+    background-color:#acd0b6;
+    text-align: center;
+    height: 71px;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+
+.slogan{
+    font-family: 'Cookie', cursive;
+    font-size: 71px;
+    color: white;
+    text-align: center;
+}
+
+.form {
+    display: grid;
+    text-align: center;
+    padding-left: 45%;
+    padding-right: 50%;
+}
+
+.form input textarea button{
+    border: none;
+    margin:5px;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+}
