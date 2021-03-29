@@ -14,23 +14,13 @@ function HomePage() {
     const [message, setMessage] = useState('');
 
     const handleSubmit = (e) => {
-        if(!name || email === '' || message === '') return alert('porfavor, preencha os campos');
+        if( !name || !email || !message ){
+            alert('porfavor, preencha os campos');
+            return e.preventDefault();
+        }
 
         alert("Mensagem enviada com sucesso, a GreenCity agradece sua companhia")
-
-        e.preventDefault();
-    }
-
-    const handleSetName = (e) => {
-        setName(e.target.value);
-    }
-
-    const handleSetEmail = (e) => {
-        setEmail(e.target.value);
-    }
-
-    const handleSetMessage = (e) => {
-        setMessage(e.target.value);
+        return e.preventDefault();
     }
 
     return(<>
@@ -58,13 +48,13 @@ function HomePage() {
                 type="text"
                 id="name"
                 placeholder="Nome"
-                onChange={handleSetName}
+                onChange={ e => setName(e.target.value) }
             />
             <input
                 type="text"
                 id="email"
                 placeholder="Email"
-                onChange={handleSetEmail}
+                onChange={ e => setEmail(e.target.value) }
             />
             <textarea
                 name="message"
@@ -72,7 +62,7 @@ function HomePage() {
                 cols="30"
                 rows="10"
                 placeholder="Mensagem"
-                onChange={(e) => { setMessage(e.target.value) }}
+                onChange={ e => setMessage(e.target.value) }
             ></textarea>
             <input
                 type="submit"
