@@ -1,6 +1,8 @@
 import styles from '../styles/Home.module.css'
 import Image from 'next/image'
 
+//import styles2 from '../styles/Post.modules.css'
+
 import {useState} from 'react';
 
 import Head from 'next/head';
@@ -12,7 +14,7 @@ function HomePage() {
     const [message, setMessage] = useState('');
 
     const handleSubmit = (e) => {
-        if(name === '' || email === '' || message === '') return alert('porfavor, preencha os campos');
+        if(!name || email === '' || message === '') return alert('porfavor, preencha os campos');
 
         alert("Mensagem enviada com sucesso, a GreenCity agradece sua companhia")
 
@@ -70,7 +72,7 @@ function HomePage() {
                 cols="30"
                 rows="10"
                 placeholder="Mensagem"
-                onChange={handleSetMessage}
+                onChange={(e) => { setMessage(e.target.value) }}
             ></textarea>
             <input
                 type="submit"
