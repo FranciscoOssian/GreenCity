@@ -1,7 +1,26 @@
 import styles from '../styles/Home.module.css'
 import Image from 'next/image'
+import Link from 'next/link';
 
 //import styles2 from '../styles/Post.modules.css'
+
+const HeadFooter = ({style}) => {
+    return (<>
+        <div className={style}>
+            <Image
+                src="/06-LOGO.png"
+                alt="Logo"
+                width={212}
+                height={38}
+            />
+            <Link href="/aboutUs"><a>O restaurante</a></Link>
+            <Link href="/contact"><a>Contato</a></Link>
+        </div>
+    </>)
+}
+
+const Header = ({style}) => <HeadFooter style={style}></HeadFooter>
+const Footer = ({style}) => <HeadFooter style={style}></HeadFooter>
 
 import {useState} from 'react';
 
@@ -30,16 +49,13 @@ function HomePage() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
 
+
     <div className={styles.app}>
 
-        <div className={styles.head}>
-            <Image
-                src="/06-LOGO.png"
-                alt="Logo"
-                width={212}
-                height={38}
-            />
-        </div>
+        <Header
+            style={styles.head}
+        />
+        
         
         <h1 className={styles.slogan}>Vem tomar um café<br/> com a gente</h1>
 
@@ -69,6 +85,10 @@ function HomePage() {
                 value="Enviar"
             />
         </form>
+
+        <Footer
+            style={styles.footer}
+        />
 
     </div>
 

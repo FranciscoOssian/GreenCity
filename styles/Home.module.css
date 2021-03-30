@@ -1,49 +1,71 @@
-/* font-family: 'Cookie', cursive; */
-@import url('https://fonts.googleapis.com/css?family=Cookie&display=swap');
+    /* font-family: 'Cookie', cursive; */
 
-/* font-family: 'Open Sans', sans-serif; */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Cookie&display=swap');
+    /* font-family: 'Open Sans', sans-serif; */
 
-.app{
-    background-image: url("https://raw.githubusercontent.com/FranciscoOssian/front-end-intern-test/master/assets/04-BG.png");
-    margin: 0%;
-    padding: 0%;
-    height: 100vh; /* For 100% screen height */
-    width:  100vw; /* For 100% screen width */
-}
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+    /*'Roboto Slab', serif;*/
 
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+    .app {
+        background-image: url("https://raw.githubusercontent.com/FranciscoOssian/front-end-intern-test/master/assets/04-BG.png");
+        margin: 0%;
+        padding: 0%;
+        height: 100vh;
+        /* For 100% screen height */
+        width: 100vw;
+        /* For 100% screen width */
+    }
 
-.head{
-    background-color:#acd0b6;
-    display: flex;
-    justify-content: center;
-}
+    .head, .footer {
+        background-color: #acd0b6;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
 
-.slogan{
-    font-family: 'Cookie', cursive;
-    font-size: 71px;
-    color: white;
-    text-align: center;
-}
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
 
-.form {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    padding-left: 35%;
-    padding-right: 35%;
-    height: 40%;
+    .head a, .footer a {
+        font-size: 20px;
+        text-decoration: none;
+        color: #55665A;
+        font-family: 'Roboto Slab', serif;
+    }
 
-}
+    .slogan {
+        font-family: 'Cookie', cursive;
+        font-size: 71px;
+        color: white;
+        text-align: center;
+    }
 
-
-
-@media only screen and (max-width: 600px) {
     .form {
-        padding-left: 10%;
-        padding-right: 10%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        padding-left: 35%;
+        padding-right: 35%;
+        height: 40%;
     }
-    .slogan{
-        font-size: 50px;
+
+    @media only screen and (max-width: 600px) {
+        .form {
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+        .slogan {
+            font-size: 50px;
+        }
+        .head, .footer {
+            flex-direction: column;
+        }
+        .head a, .footer a {
+            display: none;
+        }
     }
-}
