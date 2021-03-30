@@ -17,6 +17,30 @@
         /* For 100% screen width */
     }
 
+    .aboutUs{
+        display: flex;
+        flex-direction: row;
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+
+    .aboutUs h1{
+        font-family: 'Cookie', cursive;
+        font-size: 35px;
+        color: white;
+    }
+
+    .aboutUs img{
+        border-radius: 100%;
+        margin: 1px;
+    }
+
+    .aboutUs h2{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+        color: white;
+    }
+
     .head, .footer {
         background-color: #acd0b6;
         display: flex;
@@ -58,6 +82,9 @@
         .form {
             padding-left: 10%;
             padding-right: 10%;
+        }
+        .knowUs h1{
+            font-size: 25px;
         }
         .slogan {
             font-size: 50px;

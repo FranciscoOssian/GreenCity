@@ -2,6 +2,8 @@ import styles from '../styles/Home.module.css'
 import Image from 'next/image'
 import Link from 'next/link';
 
+import DB from '../db.json';
+
 //import styles2 from '../styles/Post.modules.css'
 
 const HeadFooter = ({style}) => {
@@ -55,6 +57,19 @@ function HomePage() {
         <Header
             style={styles.head}
         />
+
+        <div className={styles.aboutUs}>
+            <div>
+                <h1> {DB.knowUs.title} </h1>
+                <h2> {DB.knowUs.text} </h2>
+            </div>
+            <Image
+                src="/cafe.jpg"
+                alt="Logo"
+                width={212}
+                height={38}
+            />
+        </div>
         
         
         <h1 className={styles.slogan}>Vem tomar um café<br/> com a gente</h1>
