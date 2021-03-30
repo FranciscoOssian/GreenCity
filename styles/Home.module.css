@@ -36,16 +36,14 @@
 
 }
 
-.form input textarea button{
-    border: none;
-    margin:5px;
-    border-bottom-style: solid;
-    border-bottom-width: 3px;
-}
 
 
 @media only screen and (max-width: 600px) {
-    .form input textarea button {
-        height: 100%;
+    .form {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .slogan{
+        font-size: 50px;
     }
 }
