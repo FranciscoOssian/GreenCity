@@ -71,6 +71,7 @@
     padding-left: 35%;
     padding-right: 35%;
     height: 40%;
+    padding-bottom: 65px;
 }
 
 @media only screen and (max-width: 600px) {
