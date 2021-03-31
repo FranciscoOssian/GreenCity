@@ -1,98 +1,104 @@
-    /* font-family: 'Cookie', cursive; */
+/* font-family: 'Cookie', cursive; */
 
-    @import url('https://fonts.googleapis.com/css?family=Cookie&display=swap');
-    /* font-family: 'Open Sans', sans-serif; */
+@import url('https://fonts.googleapis.com/css?family=Cookie&display=swap');
+/* font-family: 'Open Sans', sans-serif; */
 
-    @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
-    /*'Roboto Slab', serif;*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+/*'Roboto Slab', serif;*/
 
-    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
-    .app {
-        background-image: url("https://raw.githubusercontent.com/FranciscoOssian/front-end-intern-test/master/assets/04-BG.png");
-        margin: 0%;
-        padding: 0%;
-        height: 100vh;
-        /* For 100% screen height */
-        width: 100vw;
-        /* For 100% screen width */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+.app {
+    background-image: url("https://raw.githubusercontent.com/FranciscoOssian/front-end-intern-test/master/assets/04-BG.png");
+    background-repeat: repeat-y;
+}
+
+.aboutUs{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.aboutUs h1{
+    font-family: 'Cookie', cursive;
+    font-size: 35px;
+    color: white;
+}
+
+.aboutUs h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: white;
+}
+
+.aboutUs img{
+    border-radius: 100%;
+}
+
+
+.head, .footer {
+    background-color: #acd0b6;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.head a, .footer a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #55665A;
+    font-family: 'Roboto Slab', serif;
+}
+
+.slogan {
+    font-family: 'Cookie', cursive;
+    font-size: 71px;
+    color: white;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding-left: 35%;
+    padding-right: 35%;
+    height: 40%;
+}
+
+@media only screen and (max-width: 600px) {
+    .form {
+        padding-left: 10%;
+        padding-right: 10%;
     }
-
+    .knowUs h1{
+        font-size: 25px;
+    }
+    .slogan {
+        font-size: 50px;
+    }
+    .head, .footer {
+        flex-direction: column;
+    }
+    .head a, .footer a {
+        display: none;
+    }
     .aboutUs{
         display: flex;
-        flex-direction: row;
-        padding-left: 25%;
-        padding-right: 25%;
+        flex-direction: column-reverse;
+        padding-left: 0;
+        padding-right: 0;
     }
-
-    .aboutUs h1{
-        font-family: 'Cookie', cursive;
-        font-size: 35px;
-        color: white;
-    }
-
     .aboutUs img{
-        border-radius: 100%;
-        margin: 1px;
+        border-radius: 0;
+        height: 425px;
+        width: 38px;
     }
-
-    .aboutUs h2{
-        font-family: 'Open Sans', sans-serif;
-        font-size: 15px;
-        color: white;
-    }
-
-    .head, .footer {
-        background-color: #acd0b6;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-    .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-    }
-
-    .head a, .footer a {
-        font-size: 20px;
-        text-decoration: none;
-        color: #55665A;
-        font-family: 'Roboto Slab', serif;
-    }
-
-    .slogan {
-        font-family: 'Cookie', cursive;
-        font-size: 71px;
-        color: white;
-        text-align: center;
-    }
-
-    .form {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
-        padding-left: 35%;
-        padding-right: 35%;
-        height: 40%;
-    }
-
-    @media only screen and (max-width: 600px) {
-        .form {
-            padding-left: 10%;
-            padding-right: 10%;
-        }
-        .knowUs h1{
-            font-size: 25px;
-        }
-        .slogan {
-            font-size: 50px;
-        }
-        .head, .footer {
-            flex-direction: column;
-        }
-        .head a, .footer a {
-            display: none;
-        }
-    }
+}
