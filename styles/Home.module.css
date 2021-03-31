@@ -16,7 +16,7 @@
 .aboutUs{
     display: grid;
     grid-template-columns: auto auto;
-    padding: 10px 25% 0 25%;
+    padding: 20px 25% 0 25%;
 }
 
 .aboutUs h1{
@@ -43,10 +43,9 @@
     align-items: center;
 }
 
-.footer {
+.head {
     position: fixed;
-    left: 0;
-    bottom: 0;
+    z-index: +1;
     width: 100%;
 }
 
@@ -74,32 +73,40 @@
     padding-bottom: 65px;
 }
 
+.form input[red="yes"], .form textarea[red="yes"]{
+    background-color: #fc9191;
+}
+
 @media only screen and (max-width: 600px) {
-    .form {
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-    .knowUs h1{
-        font-size: 25px;
-    }
-    .slogan {
-        font-size: 50px;
-    }
     .head, .footer {
         flex-direction: column;
     }
     .head a, .footer a {
         display: none;
     }
+    .slogan {
+        font-size: 50px;
+    }
     .aboutUs{
         display: flex;
         flex-direction: column-reverse;
-        padding-left: 0;
-        padding-right: 0;
+        padding: 0 0 0 0;
     }
     .aboutUs img{
         border-radius: 0;
         height: 425px;
         width: 38px;
+    }
+    .aboutUs h1{
+        text-align: center;
+        padding: 0 5% 0 5%;
+    }
+    .aboutUs h2{
+        text-align: center;
+        padding: 0 5% 0 5%;
+    }
+    .form {
+        padding-left: 10%;
+        padding-right: 10%;
     }
 }

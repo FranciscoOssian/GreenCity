@@ -24,7 +24,7 @@ const HeadFooter = ({style}) => {
 const Header = ({style}) => <HeadFooter style={style}></HeadFooter>
 const Footer = ({style}) => <HeadFooter style={style}></HeadFooter>
 
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 
 import Head from 'next/head';
 
@@ -33,8 +33,10 @@ function HomePage() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const [useRed, setUseRed] = useState(false);
 
     const handleSubmit = (e) => {
+        setUseRed(true);
         if( !name || !email || !message ){
             alert('porfavor, preencha os campos');
             return e.preventDefault();
@@ -79,12 +81,14 @@ function HomePage() {
                 type="text"
                 id="name"
                 placeholder="Nome"
+                red={!name && useRed? "yes" : "none"}
                 onChange={ e => setName(e.target.value) }
             />
             <input
                 type="text"
                 id="email"
                 placeholder="Email"
+                red={!email && useRed? "yes" : "none"}
                 onChange={ e => setEmail(e.target.value) }
             />
             <textarea
@@ -93,6 +97,7 @@ function HomePage() {
                 cols="30"
                 rows="10"
                 placeholder="Mensagem"
+                red={!message && useRed? "yes" : "none"}
                 onChange={ e => setMessage(e.target.value) }
             ></textarea>
             <input
