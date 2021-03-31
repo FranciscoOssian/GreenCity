@@ -13,25 +13,25 @@
     background-image: linear-gradient(0deg, #425f66 0%, #425f66 30%, rgba(0, 0, 0, 0) 100%), url("https://raw.githubusercontent.com/FranciscoOssian/front-end-intern-test/master/assets/04-BG.png");
 }
 
-.aboutUs{
+.card{
     display: grid;
     grid-template-columns: auto auto;
     padding: 50px 25% 0 25%;
 }
 
-.aboutUs h1{
+.card h1{
     font-family: 'Cookie', cursive;
     font-size: 35px;
     color: white;
 }
 
-.aboutUs h2{
+.card h2{
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
     color: white;
 }
 
-.aboutUs img{
+.card img{
     border-radius: 100%;
 }
 
@@ -87,21 +87,21 @@
     .slogan {
         font-size: 50px;
     }
-    .aboutUs{
+    .card{
         display: flex;
         flex-direction: column-reverse;
         padding: 0 0 0 0;
     }
-    .aboutUs img{
+    .card img{
         border-radius: 0;
         height: 425px;
         width: 38px;
     }
-    .aboutUs h1{
+    .card h1{
         text-align: center;
         padding: 0 5% 0 5%;
     }
-    .aboutUs h2{
+    .card h2{
         text-align: center;
         padding: 0 5% 0 5%;
     }

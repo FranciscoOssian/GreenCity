@@ -60,18 +60,34 @@ function HomePage() {
             style={styles.head}
         />
 
-        <div className={styles.aboutUs}>
-            <div>
-                <h1> {DB.knowUs.title} </h1>
-                <h2> {DB.knowUs.text} </h2>
+        <div className={styles.cards}>
+            <div className={styles.card}>
+                <div>
+                    <h1> {DB.knowUs.title} </h1>
+                    <h2> {DB.knowUs.text} </h2>
+                </div>
+                <Image
+                    src="/cafe.jpg"
+                    alt="Logo"
+                    width={212}
+                    height={38}
+                />
             </div>
-            <Image
-                src="/cafe.jpg"
-                alt="Logo"
-                width={212}
-                height={38}
-            />
+            <div className={styles.card}>
+                <Image
+                    src="/cardapio.jpg"
+                    alt="Logo"
+                    width={200}
+                    height={190}
+                />
+                <div>
+                    <h1> {DB.knowTMenu.title} </h1>
+                    <h2> {DB.knowTMenu.text} </h2>
+                </div>
+            </div>
         </div>
+
+        
         
         
         <h1 className={styles.slogan}>Vem tomar um café<br/> com a gente</h1>
