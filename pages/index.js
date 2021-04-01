@@ -4,8 +4,6 @@ import Link from 'next/link';
 
 import DB from '../db.json';
 
-//import styles2 from '../styles/Post.modules.css'
-
 const HeadFooter = ({style}) => {
     return (<>
         <div className={style}>
@@ -18,6 +16,14 @@ const HeadFooter = ({style}) => {
             <Link href="/aboutUs"><a>O restaurante</a></Link>
             <Link href="/menu"><a>Cardápio</a></Link>
             <Link href="/contact"><a>Contato</a></Link>
+            <div className={styles.menu}>
+                <Image
+                    src="/menu.svg"
+                    alt="Menu"
+                    width={38}
+                    height={38}
+                />
+            </div>
         </div>
     </>)
 }
