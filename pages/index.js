@@ -74,7 +74,7 @@ function HomePage() {
                     <h2> {DB.knowUs.text} </h2>
                 </div>
                 <Image
-                    src="/cafe.jpg"
+                    src="/cafe.png"
                     alt="Logo"
                     width={212}
                     height={38}
