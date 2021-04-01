@@ -16,6 +16,7 @@ const HeadFooter = ({style}) => {
                 height={38}
             />
             <Link href="/aboutUs"><a>O restaurante</a></Link>
+            <Link href="/menu"><a>Cardápio</a></Link>
             <Link href="/contact"><a>Contato</a></Link>
         </div>
     </>)
@@ -83,6 +84,7 @@ function HomePage() {
                 <div>
                     <h1> {DB.knowTMenu.title} </h1>
                     <h2> {DB.knowTMenu.text} </h2>
+                    <Link href="/menu"><a className={styles.btn1}>Abrir cardápio</a></Link>
                 </div>
             </div>
         </div>
@@ -119,6 +121,7 @@ function HomePage() {
             <input
                 type="submit"
                 value="Enviar"
+                className={styles.btn1}
             />
         </form>
 

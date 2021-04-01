@@ -34,7 +34,6 @@
     border-radius: 100%;
 }
 
-
 .head, .footer {
     background-color: #acd0b6;
     display: flex;
@@ -72,6 +71,29 @@
     padding-bottom: 65px;
 }
 
+.btn1{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    
+    color: #FFFFFF;
+    background-color: #81A296;
+
+    text-decoration: none;
+    border-radius: 3%;
+
+    padding: 10px;
+
+    border: none;
+
+    box-shadow: 0px 10px #486b5e;
+}
+
 .form input[red="yes"], .form textarea[red="yes"]{
     background-color: #fc9191;
 }
@@ -93,8 +115,7 @@
     }
     .card img{
         border-radius: 0;
-        height: 425px;
-        width: 38px;
+        height: 50vh;
     }
     .card h1{
         text-align: center;
@@ -107,5 +128,10 @@
     .form {
         padding-left: 10%;
         padding-right: 10%;
+    }
+    .btn1{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 20px 20px 20px 20px;
     }
 }
