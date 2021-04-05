@@ -13,12 +13,14 @@
 }
 
 .card{
+    transition: 0.4s;
     display: grid;
     grid-template-columns: auto auto;
     padding: 50px 25% 0 25%;
 }
 
 .card h1{
+    transition: 0.4s;
     font-family: Cookie;
     font-style: normal;
     font-weight: normal;
@@ -30,6 +32,7 @@
 }
 
 .card h2{
+    transition: 0.4s;
     font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
@@ -39,10 +42,14 @@
 }
 
 .card img{
+    transition: 0.4s;
     border-radius: 100%;
+    width:200px;
+    height:190px;
 }
 
 .head, .footer {
+    transition: 0.4s;
     background-color: #acd0b6;
     display: flex;
     justify-content: space-evenly;
@@ -50,23 +57,27 @@
 }
 
 .head {
+    transition: 0.4s;
     position: fixed;
     z-index: +1;
     width: 100%;
 }
 
 .head a, .footer a {
+    transition: 0.4s;
     font-size: 20px;
     text-decoration: none;
     color: #55665A;
     font-family: 'Roboto Slab', serif;
 }
 
-.head div, .footer div{
+.menu {
     display: none;
 }
 
+
 .slogan {
+    transition: 0.4s;
     font-family: 'Cookie', cursive;
     font-size: 71px;
     color: white;
@@ -74,6 +85,7 @@
 }
 
 .form {
+    transition: 0.4s;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -83,6 +95,7 @@
     padding-bottom: 65px;
 }
 .form input, .form textarea{
+    transition: 0.4s;
     border-radius: 5px;
     border: none;
 
@@ -98,6 +111,7 @@
 }
 
 .btn1{
+    transition: 0.4s;
     font-family: Open Sans;
     font-style: normal;
     font-weight: bold;
@@ -120,44 +134,76 @@
 }
 
 .form input[red="yes"], .form textarea[red="yes"]{
+    transition: 0.4s;
     background-color: #fc9191;
 }
 
 @media only screen and (max-width: 600px) {
-    .head div{
+    .menu{
+        display:flex;
+    }
+    .menu ul{
+        display: none;
+    }
+    .menu:hover ul{
         display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        align-content: flex-start;
+        left: 0;
+        top: 2.5vh;
+        background-color: #CEE1CE;
+        width: 100%;
+        height: 100vh;
+    }
+    .menu li{
+        font-size: 24px;
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-top: 5%;
+        padding-bottom: 5%;
     }
     .head, .footer{
+        transition: 0.4s;
         justify-content: space-around;
         align-items: center;
     }
     .head a, .footer a {
+        transition: 0.4s;
         display: none;
     }
     .slogan {
+        transition: 0.4s;
         font-size: 50px;
     }
     .card{
+        transition: 1s;
         display: flex;
         flex-direction: column-reverse;
         padding: 0 0 0 0;
     }
     .card img{
+        transition: 0.4s;
         border-radius: 0;
         height: 50vh;
+        width: auto;
     }
     .card h1{
+        transition: 0.4s;
         font-size: 57px;
     }
     .card h2{
+        transition: 0.4s;
         text-align: center;
         padding: 0 5% 0 5%;
     }
     .form {
+        transition: 0.4s;
         padding-left: 10%;
         padding-right: 10%;
     }
     .btn1{
+        transition: 0.4s;
         display: grid;
         grid-template-columns: auto;
         margin: 20px 20px 20px 20px;

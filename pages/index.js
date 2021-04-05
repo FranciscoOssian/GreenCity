@@ -23,6 +23,14 @@ const HeadFooter = ({style}) => {
                     width={38}
                     height={38}
                 />
+                <div>
+                    <ul>
+                        <li>O restaurante</li>
+                        <li>Cardápio</li>
+                        <li><a>Contato</a></li>
+                    </ul>
+                    
+                </div>
             </div>
         </div>
     </>)
@@ -73,19 +81,13 @@ function HomePage() {
                     <h1> {DB.knowUs.title} </h1>
                     <h2> {DB.knowUs.text} </h2>
                 </div>
-                <Image
+                <img
                     src="/cafe.png"
-                    alt="Logo"
-                    width={212}
-                    height={38}
                 />
             </div>
             <div className={styles.card}>
-                <Image
+                <img
                     src="/cardapio.jpg"
-                    alt="Logo"
-                    width={200}
-                    height={190}
                 />
                 <div>
                     <h1> {DB.knowTMenu.title} </h1>
