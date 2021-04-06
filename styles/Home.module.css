@@ -144,6 +144,7 @@
     }
     .menu ul{
         display: none;
+        list-style-type: none;
     }
     .menu:hover ul{
         display: flex;
@@ -157,18 +158,22 @@
         height: 100vh;
     }
     .menu li{
+        display: flex;
+        justify-content: flex-end;
         font-size: 24px;
-        padding-left: 15%;
-        padding-right: 15%;
+        padding-left: 50%;
         padding-top: 5%;
         padding-bottom: 5%;
+    }
+    .menu li a{
+        text-decoration: none;
     }
     .head, .footer{
         transition: 0.4s;
         justify-content: space-around;
         align-items: center;
     }
-    .head a, .footer a {
+    .head > a, .footer > a {
         transition: 0.4s;
         display: none;
     }

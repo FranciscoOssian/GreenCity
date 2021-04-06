@@ -25,9 +25,9 @@ const HeadFooter = ({style}) => {
                 />
                 <div>
                     <ul>
-                        <li>O restaurante</li>
-                        <li>Cardápio</li>
-                        <li><a>Contato</a></li>
+                        <li><Link href="/aboutUs"><a>O restaurante</a></Link></li>
+                        <li><Link href="/menu"><a>Cardápio</a></Link></li>
+                        <li><Link href="/contact"><a>Contato</a></Link></li>
                     </ul>
                     
                 </div>
