@@ -1,47 +1,13 @@
+import Head from 'next/head';
+import {useState} from 'react';
 import styles from '../styles/Home.module.css'
-import Image from 'next/image'
 import Link from 'next/link';
-
 import DB from '../db.json';
-
-const HeadFooter = ({style}) => {
-    return (<>
-        <div className={style}>
-            <Image
-                src="/06-LOGO.png"
-                alt="Logo"
-                width={212}
-                height={38}
-            />
-            <Link href="/aboutUs"><a>O restaurante</a></Link>
-            <Link href="/menu"><a>Cardápio</a></Link>
-            <Link href="/contact"><a>Contato</a></Link>
-            <div className={styles.menu}>
-                <Image
-                    src="/menu.svg"
-                    alt="Menu"
-                    width={38}
-                    height={38}
-                />
-                <div>
-                    <ul>
-                        <li><Link href="/aboutUs"><a>O restaurante</a></Link></li>
-                        <li><Link href="/menu"><a>Cardápio</a></Link></li>
-                        <li><Link href="/contact"><a>Contato</a></Link></li>
-                    </ul>
-                    
-                </div>
-            </div>
-        </div>
-    </>)
-}
+import HeadFooter from '../components/HeaderFooter/index'
 
 const Header = ({style}) => <HeadFooter style={style}></HeadFooter>
 const Footer = ({style}) => <HeadFooter style={style}></HeadFooter>
 
-import {useEffect, useState} from 'react';
-
-import Head from 'next/head';
 
 function HomePage() {
 
@@ -64,16 +30,14 @@ function HomePage() {
     return(<>
 
     <Head>
-        <title>GreenCity</title>
+        <title>{DB.appName}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
 
 
     <div className={styles.app}>
 
-        <Header
-            style={styles.head}
-        />
+        <Header style={styles.head} />
 
         <div className={styles.cards}>
             <div className={styles.card}>
@@ -81,14 +45,10 @@ function HomePage() {
                     <h1> {DB.knowUs.title} </h1>
                     <h2> {DB.knowUs.text} </h2>
                 </div>
-                <img
-                    src="/cafe.png"
-                />
+                <img src="/cafe.png"/>
             </div>
             <div className={styles.card}>
-                <img
-                    src="/cardapio.jpg"
-                />
+                <img src="/cardapio.jpg" />
                 <div>
                     <h1> {DB.knowTMenu.title} </h1>
                     <h2> {DB.knowTMenu.text} </h2>
@@ -96,9 +56,6 @@ function HomePage() {
                 </div>
             </div>
         </div>
-
-        
-        
         
         <h1 className={styles.slogan}>Vem tomar um café<br/> com a gente</h1>
 
@@ -133,9 +90,7 @@ function HomePage() {
             />
         </form>
 
-        <Footer
-            style={styles.footer}
-        />
+        <Footer style={styles.footer}/>
 
     </div>
 
