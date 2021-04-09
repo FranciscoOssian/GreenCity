@@ -50,7 +50,6 @@
 }
 
 .container {
-    width: 100%;
     max-width: 1000px;
     padding: 0 15px;
     margin: 0 auto;
@@ -250,7 +249,7 @@
     .head ul li {
         padding: 20px 0px 20px 0px;
         border-bottom: 1px solid #A3C2A3;
-        width: 90%;
+        width: 95%;
         text-align: right;
     }
     
