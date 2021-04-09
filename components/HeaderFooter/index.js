@@ -1,39 +1,47 @@
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import styles from '../../styles/Home.module.css'
+import {useState} from 'react';
 
 
-const HeadFooter = ({style}) => {
-    return (<>
-        <div className={style}>
-            <Image
-                src="/06-LOGO.png"
-                alt="Logo"
-                width={212}
-                height={38}
-            />
-            <Link href="/aboutUs"><a>O restaurante</a></Link>
-            <Link href="/menu"><a>Cardápio</a></Link>
-            <Link href="/contact"><a>Contato</a></Link>
-            <div className={styles.menu}>
-                <Image
-                    src="/menu.svg"
-                    alt="Menu"
-                    width={38}
-                    height={38}
-                />
-                <div>
-                    <ul>
-                        <li><Link href="/aboutUs"><a>O restaurante</a></Link></li>
-                        <li><Link href="/menu"><a>Cardápio</a></Link></li>
-                        <li><Link href="/contact"><a>Contato</a></Link></li>
-                    </ul>
-                    
+const HeadFooter = ({ style }) => {
+    const [opened, setOpen] = useState(styles.menuClosed)
+    const [menuSvg, setMenuSvg] = useState('./menu.svg')
+    return (
+        <div className={opened}>
+
+            <div className={style}>
+
+                <div className={styles.container}>
+
+                    <div>
+                        <img src="/06-LOGO.png"></img>
+                        {
+                            style === styles.head?
+                                <img
+                                    onClick = { () => {
+                                        const sets = (a,b) => { setOpen(a) ; setMenuSvg(b) }
+                                        opened === styles.menuClosed? sets(styles.menuOpen, './menu2.svg') : sets(styles.menuClosed, './menu.svg')
+                                    } }
+                                    src={ menuSvg }>
+                                </img> : <></>
+                        }
+
+                    </div>
+
+                    {
+                        style === styles.head? 
+                            <ul>
+                                <li><Link href="/aboutUs"><a>O restaurante</a></Link></li>
+                                <li><Link href="/menu"><a>Cardápio</a></Link></li>
+                                <li className={styles.contactButton}><Link href="/contact"><a>Contato</a></Link></li>
+                            </ul> : <></>
+                    }
+
                 </div>
             </div>
         </div>
-    </>)
+    )
 }
 
 export default HeadFooter
