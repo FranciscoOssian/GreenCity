@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import styles from '../../styles/Home.module.css'
-import {useState} from 'react';
+import { useState } from 'react';
 
 
 const HeadFooter = ({ style }) => {
@@ -17,26 +17,23 @@ const HeadFooter = ({ style }) => {
                     <div>
                         <img src="/06-LOGO.png"></img>
                         {
-                            style === styles.head?
+                            style === styles.head ?
                                 <img
-                                    onClick = { () => {
-                                        const sets = (a,b) => { setOpen(a) ; setMenuSvg(b) }
-                                        opened === styles.menuClosed? sets(styles.menuOpen, './menu2.svg') : sets(styles.menuClosed, './menu.svg')
-                                    } }
-                                    src={ menuSvg }>
+                                    onClick={() => {
+                                        const sets = (a, b) => { setOpen(a); setMenuSvg(b) }
+                                        opened === styles.menuClosed ? sets(styles.menuOpen, './menu2.svg') : sets(styles.menuClosed, './menu.svg')
+                                    }}
+                                    src={menuSvg}>
                                 </img> : <></>
                         }
 
                     </div>
 
-                    {
-                        style === styles.head? 
-                            <ul>
-                                <li><Link href="/aboutUs"><a>O restaurante</a></Link></li>
-                                <li><Link href="/menu"><a>Cardápio</a></Link></li>
-                                <li className={styles.contactButton}><Link href="/contact"><a>Contato</a></Link></li>
-                            </ul> : <></>
-                    }
+                    <ul>
+                        <li><Link href="/aboutUs"><a>O restaurante</a></Link></li>
+                        <li><Link href="/menu"><a>Cardápio</a></Link></li>
+                        <li className={styles.contactButton}><Link href="/contact"><a>Contato</a></Link></li>
+                    </ul>
 
                 </div>
             </div>

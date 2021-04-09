@@ -89,14 +89,7 @@
     width:300px;
     height:300px;
 }
-@media only screen and (min-width: 600px) {
-    .card img{
-        margin-left: 100px;
-    }.card:last-of-type img{
-        margin-left: 0;
-        margin-right: 100px;
-    }
-}
+
 
 .slogan {
     transition: 0.4s;
@@ -153,10 +146,24 @@
     box-shadow: 0px 10px #486b5e;
 }
 
+/*------------------------------------------------------with js-----------------------------------------------------------------------------------------*/
+
 .form input[red="yes"], .form textarea[red="yes"]{
     transition: 0.4s;
     background-color: #fc9191;
 }
+
+
+@media only screen and (min-width: 600px) {
+    .card img{
+        margin-left: 100px;
+    }.card:last-of-type img{
+        margin-left: 0;
+        margin-right: 100px;
+    }
+}
+
+/*---------------------------------------------MOBILE-----------------------------------------------------------------------------------------*/
 
 @media only screen and (max-width: 600px) {
     .card{
