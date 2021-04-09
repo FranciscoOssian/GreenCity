@@ -7,6 +7,7 @@
     background-image: linear-gradient(0deg, #425f66 0%, #425f66 30%, rgba(0, 0, 0, 0) 100%), url("https://raw.githubusercontent.com/FranciscoOssian/front-end-intern-test/master/assets/04-BG.png");
 }
 
+
 .head, .footer {
     transition: 0.4s;
     background-color: #acd0b6;
@@ -87,10 +88,14 @@
     border-radius: 100%;
     width:300px;
     height:300px;
-    margin-left: 100px;
-}.card:last-of-type img{
-    margin-left: 0;
-    margin-right: 100px;
+}
+@media only screen and (min-width: 600px) {
+    .card img{
+        margin-left: 100px;
+    }.card:last-of-type img{
+        margin-left: 0;
+        margin-right: 100px;
+    }
 }
 
 .slogan {
