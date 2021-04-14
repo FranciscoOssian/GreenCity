@@ -40,21 +40,28 @@ function HomePage() {
         <Header style={styles.head} />
 
         <div className={styles.cards}>
+
             <div className={styles.card}>
+
                 <div>
                     <h1> {DB.knowUs.title} </h1>
                     <h2> {DB.knowUs.text} </h2>
                 </div>
                 <img src="/cafe.png"/>
+
             </div>
+
             <div className={styles.card}>
+
                 <img src="/cardapio.jpg" />
                 <div>
                     <h1> {DB.knowTMenu.title} </h1>
                     <h2> {DB.knowTMenu.text} </h2>
-                    <Link href="/menu"><a className={styles.btn1}>Abrir cardápio</a></Link>
+                    <Link href="/menu"><a className={styles.btn1Card}>Abrir cardápio</a></Link>
                 </div>
+
             </div>
+
         </div>
         
         <h1 className={styles.slogan}>Vem tomar um café<br/> com a gente</h1>
