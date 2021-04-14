@@ -4,9 +4,11 @@ import styles from '../styles/Home.module.css'
 import Link from 'next/link';
 import DB from '../db.json';
 import HeadFooter from '../components/HeaderFooter/index'
+import Popup from '../components/Popup/index'
 
 const Header = ({style}) => <HeadFooter style={style}></HeadFooter>
 const Footer = ({style}) => <HeadFooter style={style}></HeadFooter>
+
 
 
 function HomePage() {
@@ -15,15 +17,19 @@ function HomePage() {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [useRed, setUseRed] = useState(false);
+    const [blur, setBlur] = useState(styles.notBlur);
+    const [popupHidden, setpopupHidden] = useState(styles.popupHidden)
 
     const handleSubmit = (e) => {
-        setUseRed(true);
         if( !name || !email || !message ){
+            setUseRed(true);
             alert('porfavor, preencha os campos');
             return e.preventDefault();
         }
-
-        alert("Mensagem enviada com sucesso, a GreenCity agradece sua companhia")
+        
+        setpopupHidden(styles.popup);
+        setBlur(styles.blur)
+        
         return e.preventDefault();
     }
 
@@ -34,8 +40,15 @@ function HomePage() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
 
+    <Popup
+        style={popupHidden}
+        callback = { () => { setBlur(styles.notBlur); setpopupHidden(styles.popupHidden); } }
+    />
 
+    <div className={blur}>
     <div className={styles.app}>
+
+        
 
         <Header style={styles.head} />
 
@@ -99,6 +112,7 @@ function HomePage() {
 
         <Footer style={styles.footer}/>
 
+    </div>
     </div>
 
     </>)
