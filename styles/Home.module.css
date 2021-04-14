@@ -281,7 +281,10 @@
         display: flex;
         flex-direction: column-reverse;
         padding: 0 0 0 0;
+    }.card:last-of-type img{
+        transform: rotate(0deg);
     }.card img{
+        transform: rotate(0deg);
         transition: 0.4s;
         border-radius: 0;
         height: 50vh;
@@ -372,5 +375,67 @@
 
     .head ul li, .footer ul li {
         margin: 0;
+    }
+
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .popup{
+        position: fixed;
+        top: 25%;
+        right: 0%;
+        z-index: 6;
+        background: #EEFBF6;
+        box-shadow: 0px 15px 55px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin: 10px;
+    }
+    .popup h1{
+        margin: 10px;
+    
+        font-family: Cookie;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 60px;
+        line-height: 79.4%;
+    
+        text-align: center;
+    
+        color: #4D7981;
+    }
+    .popup h2{
+        margin: 10px;
+    
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 127%;
+    
+        text-align: center;
+    
+        color: #4D7981;
+    
+    }
+    .popup button{
+        margin: 10px;
+        width: 90%;
+        height: 50px;
+    
+        background: #2A87CA;
+        border-radius: 5px;
+    
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 100%;
+        color: #FFFFFF;
     }
 }
