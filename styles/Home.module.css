@@ -322,13 +322,7 @@
     .container > div img:last-of-type{
         display: inline;
     }
-    .head {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        z-index: 5;
-        padding: 0;
-    }
+    
 
     .menuOpen > div{
         height: 100%;
@@ -339,6 +333,14 @@
         height: 9vh;
     }.menuClosed > div ul{
         display: none;
+    }
+
+    .head {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        padding: 0;
     }
 
     .head .container {
@@ -375,6 +377,14 @@
 
     .head ul li, .footer ul li {
         margin: 0;
+    }
+
+    .footer {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     
