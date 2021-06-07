@@ -105,7 +105,7 @@ function HomePage() {
             ></textarea>
             <input
                 type="submit"
-                value="Enviar"
+                value="ENVIAR"
                 className={styles.btn1}
             />
         </form>

@@ -1,50 +1,52 @@
 @import url('https://fonts.googleapis.com/css?family=Cookie&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
-
 .app {
     background-image: url("https://raw.githubusercontent.com/FranciscoOssian/front-end-intern-test/master/assets/04-BG.png");
     background-image: linear-gradient(0deg, #425f66 0%, #425f66 30%, rgba(0, 0, 0, 0) 100%), url("https://raw.githubusercontent.com/FranciscoOssian/front-end-intern-test/master/assets/04-BG.png");
 }
 
-
 .head, .footer {
     transition: 0.4s;
     background-color: #acd0b6;
     padding: 15px 0;
-}.head {
+}
+
+.head {
     transition: 0.4s;
     width: 100%;
-}.head a, .footer a {
+}
+
+.head a, .footer a {
     transition: 0.4s;
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
-    color: #55665A;
+    color: #37595F;
     font-family: 'Roboto Slab', serif;
-}.head .container, .footer .container {
+    line-height: 100%;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.head .container, .footer .container {
     display: flex;
     align-items: center;
-}.head ul, .footer ul {
+}
+
+.head ul, .footer ul {
     display: flex;
     align-items: center;
     list-style: none;
     padding: 0;
     margin: 0 0 0 auto;
-}.head ul li, .footer ul li {
+}
+
+.head ul li, .footer ul li {
     margin: 0 15px;
 }
 
-.container > div > img:nth-child(2){
+.container>div>img:nth-child(2) {
     display: none;
-}
-
-
-.contactButton {
-    background: #37595F;
-    padding: 6px 10px;
-    border-radius: 5px;
-}.contactButton a {
-    color: #fff;
 }
 
 .container {
@@ -53,16 +55,37 @@
     margin: 0 auto;
 }
 
+.container > div {
+    display:flex;
+    justify-content: space-between;
+}
+
+.container > div > img:last-child {
+    padding-left: 17vw;
+}
+
+.contactButton {
+    background: #37595F;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+.contactButton a {
+    color: #fff;
+}
+
 .menu {
     display: none;
 }
 
-.card{
+.card {
     transition: 0.4s;
     display: grid;
     grid-template-columns: auto auto;
     padding: 50px 25% 0 25%;
-}.card h1{
+}
+
+.card h1 {
     transition: 0.4s;
     font-family: Cookie;
     font-style: normal;
@@ -70,9 +93,10 @@
     font-size: 72px;
     line-height: 79.4%;
     color: #E4ECCB;
-
     text-align: center;
-}.card h2{
+}
+
+.card h2 {
     transition: 0.4s;
     font-family: Open Sans;
     font-style: normal;
@@ -80,23 +104,31 @@
     font-size: 18px;
     line-height: 127%;
     color: #FFFFFF;
-}.card img{
-    transition: 0.4s;
-    width:300px;
-    height:300px;
-}.card img{
-    transform: rotate(13.26deg);
-}.card:last-of-type img{
-    transform: rotate(346.74deg);
 }
 
+.card img {
+    transition: 0.4s;
+    width: 300px;
+    height: 300px;
+}
+
+.card img {
+    transform: rotate(13.26deg);
+}
+
+.card:last-of-type img {
+    transform: rotate(346.74deg);
+}
 
 .slogan {
     transition: 0.4s;
     font-family: 'Cookie', cursive;
-    font-size: 71px;
-    color: white;
+    font-size: 72px;
+    color: #E4ECCB;
     text-align: center;
+    font-weight: normal;
+    line-height: 57px;
+    font-style: normal;
 }
 
 .form {
@@ -109,96 +141,100 @@
     padding-right: 35%;
     height: 40%;
     padding-bottom: 65px;
-}.form input, .form textarea{
+}
+
+.form input, .form textarea {
     transition: 0.4s;
     border-radius: 5px;
     border: none;
-
     margin: 5px;
     padding: 5px;
-
     font-family: Open Sans;
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
     line-height: 79.4%;
-}.form input{
+}
+
+.form input {
     width: 420px;
     height: 60px;
-}.form textarea{
+}
+
+.form textarea {
     width: 420px;
 }
 
-.btn1{
+.form input:last-child {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 100%;
+    height: 60px;
+}
+
+.btn1 {
     transition: 0.4s;
     font-family: Open Sans;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
     line-height: 100%;
-    
     display: flex;
     justify-content: center;
-    
     color: #FFFFFF;
     background-color: #81A296;
-
     text-decoration: none;
     border-radius: 5px;
     border: none;
-
     padding: 10px;
-
     box-shadow: 0px 10px #486b5e;
 }
 
-.btn1Card{
+.btn1Card {
     transition: 0.4s;
     font-family: Open Sans;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
     line-height: 100%;
-    
     display: flex;
     justify-content: center;
     align-items: center;
-    
     color: #FFFFFF;
     background-color: #81A296;
-
     text-decoration: none;
     border-radius: 5px;
     border: none;
-
-    padding: 10px;
-
     box-shadow: 0px 10px #486b5e;
-
     width: 241px;
     height: 49px;
 }
 
 @media only screen and (min-width: 600px) {
-    .card img{
+    .card img {
         margin-left: 100px;
-    }.card:last-of-type img{
+    }
+    .card:last-of-type img {
         margin-left: 0;
         margin-right: 100px;
     }
 }
 
-.blur{
+.blur {
     filter: blur(20px);
-}.notBlur{
+}
+
+.notBlur {
     filter: blur(0px);
 }
 
-.popupHidden{
+.popupHidden {
     display: none;
 }
 
-.popup{
+.popup {
     position: fixed;
     top: 25%;
     right: 35%;
@@ -206,46 +242,39 @@
     background: #EEFBF6;
     box-shadow: 0px 15px 55px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.popup h1{
-    margin: 56px 27px 30px 27px;
 
+.popup h1 {
+    margin: 56px 27px 30px 27px;
     font-family: Cookie;
     font-style: normal;
     font-weight: normal;
     font-size: 72px;
     line-height: 79.4%;
-
     text-align: center;
-
     color: #4D7981;
 }
-.popup h2{
-    margin: 30px 88px 33px 88px;
 
+.popup h2 {
+    margin: 30px 88px 33px 88px;
     font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 127%;
-
     text-align: center;
-
     color: #4D7981;
-
 }
-.popup button{
+
+.popup button {
     margin: 33px 56px 64px 56px;
     width: 420px;
     height: 60px;
-
     background: #2A87CA;
     border-radius: 5px;
-
     font-family: Open Sans;
     font-style: normal;
     font-weight: bold;
@@ -256,7 +285,7 @@
 
 /*------------------------------------------------------with js-----------------------------------------------------------------------------------------*/
 
-.form input[red="yes"], .form textarea[red="yes"]{
+.form input[red="yes"], .form textarea[red="yes"] {
     transition: 0.4s;
     background-color: #fc9191;
 }
@@ -265,51 +294,56 @@
 
 @media only screen and (max-width: 600px) {
     .btn1Card{
+        padding: 10px;
+    }
+    .btn1Card {
         width: auto;
         height: auto;
         margin: 15px;
         margin-bottom: 50px;
     }
-    .form input{
-        width: 100%;
+    .form input {
+        width: 91.545189504vw;
         height: 40px;
-    }.form textarea{
-        width: 100%;
     }
-    .card{
+    .form textarea {
+        width: 91.545189504vw;
+    }
+    .card {
         transition: 1s;
         display: flex;
         flex-direction: column-reverse;
         padding: 0 0 0 0;
-    }.card:last-of-type img{
+    }
+    .card:last-of-type img {
         transform: rotate(0deg);
-    }.card img{
+    }
+    .card img {
         transform: rotate(0deg);
         transition: 0.4s;
         border-radius: 0;
         height: 50vh;
         width: 100vw;
-    }.card h1{
+    }
+    .card h1 {
         transition: 0.4s;
         font-size: 57px;
-    }.card h2{
+    }
+    .card h2 {
         transition: 0.4s;
         text-align: center;
         padding: 0 5% 0 5%;
     }
-
     .slogan {
         transition: 0.4s;
         font-size: 50px;
     }
-
     .form {
         transition: 0.4s;
         padding-left: 10%;
         padding-right: 10%;
     }
-
-    .btn1{
+    .btn1 {
         transition: 0.4s;
         display: grid;
         grid-template-columns: auto;
@@ -317,24 +351,22 @@
     }
 }
 
-
 @media only screen and (max-width: 600px) {
-    .container > div img:last-of-type{
+    .container>div img:last-of-type {
         display: inline;
     }
-    
-
-    .menuOpen > div{
+    .menuOpen>div {
         height: 100%;
-    }.menuOpen > div ul{
+    }
+    .menuOpen>div ul {
         display: unset;
     }
-    .menuClosed > div {
+    .menuClosed>div {
         height: 9vh;
-    }.menuClosed > div ul{
+    }
+    .menuClosed>div ul {
         display: none;
     }
-
     .head {
         position: fixed;
         width: 100%;
@@ -342,14 +374,12 @@
         z-index: 5;
         padding: 0;
     }
-
     .head .container {
         flex-direction: column;
         align-items: flex-start;
         height: 100%;
         padding: 0;
     }
-
     .head ul {
         flex-direction: column;
         align-items: flex-end;
@@ -357,28 +387,25 @@
         height: 100%;
         background: #CEE1CE;
     }
-
     .head img {
         margin: 15px;
     }
-
     .head ul li {
-        padding: 20px 0px 20px 0px;
+        padding: 20px 19px 35px 0px;
         border-bottom: 1px solid #A3C2A3;
         width: 95%;
         text-align: right;
     }
-    
     .head ul li:last-of-type {
         border: none;
         margin-top: auto;
         text-align: center;
+        width: 95%;
+        margin-top: 100vw;
     }
-
     .head ul li, .footer ul li {
         margin: 0;
     }
-
     .footer {
         padding: 0;
         margin: 0;
@@ -386,12 +413,10 @@
         align-items: center;
         justify-content: center;
     }
-
-    
 }
 
 @media only screen and (max-width: 600px) {
-    .popup{
+    .popup {
         position: fixed;
         top: 25%;
         right: 0%;
@@ -399,48 +424,37 @@
         background: #EEFBF6;
         box-shadow: 0px 15px 55px rgba(0, 0, 0, 0.25);
         border-radius: 5px;
-    
         display: flex;
         flex-direction: column;
         align-items: center;
-
         margin: 10px;
     }
-    .popup h1{
+    .popup h1 {
         margin: 10px;
-    
         font-family: Cookie;
         font-style: normal;
         font-weight: normal;
         font-size: 60px;
         line-height: 79.4%;
-    
         text-align: center;
-    
         color: #4D7981;
     }
-    .popup h2{
+    .popup h2 {
         margin: 10px;
-    
         font-family: Open Sans;
         font-style: normal;
         font-weight: normal;
         font-size: 18px;
         line-height: 127%;
-    
         text-align: center;
-    
         color: #4D7981;
-    
     }
-    .popup button{
+    .popup button {
         margin: 10px;
         width: 90%;
         height: 50px;
-    
         background: #2A87CA;
         border-radius: 5px;
-    
         font-family: Open Sans;
         font-style: normal;
         font-weight: bold;

@@ -3,6 +3,16 @@ import Link from 'next/link'
 import styles from '../../styles/Home.module.css'
 import { useState } from 'react';
 
+import styled from '@emotion/styled';
+
+const OpenClose = styled.div`
+
+`
+
+const Container = styled.div`
+    
+`
+
 
 const HeadFooter = ({ style }) => {
     const [opened, setOpen] = useState(styles.menuClosed)
@@ -30,7 +40,7 @@ const HeadFooter = ({ style }) => {
                     </div>
 
                     <ul>
-                        <li><Link href="/aboutUs"><a>O restaurante</a></Link></li>
+                        <li><Link href="/aboutUs"><a>O Restaurante</a></Link></li>
                         <li><Link href="/menu"><a>Cardápio</a></Link></li>
                         <li className={styles.contactButton}><Link href="/contact"><a>Contato</a></Link></li>
                     </ul>
