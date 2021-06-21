@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Cookie&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
 .app {
     background-image: url("https://raw.githubusercontent.com/FranciscoOssian/front-end-intern-test/master/assets/04-BG.png");
     background-image: linear-gradient(0deg, #425f66 0%, #425f66 30%, rgba(0, 0, 0, 0) 100%), url("https://raw.githubusercontent.com/FranciscoOssian/front-end-intern-test/master/assets/04-BG.png");
@@ -28,11 +29,6 @@
     font-style: normal;
 }
 
-.head .container, .footer .container {
-    display: flex;
-    align-items: center;
-}
-
 .head ul, .footer ul {
     display: flex;
     align-items: center;
@@ -45,24 +41,6 @@
     margin: 0 15px;
 }
 
-.container>div>img:nth-child(2) {
-    display: none;
-}
-
-.container {
-    max-width: 1000px;
-    padding: 0 15px;
-    margin: 0 auto;
-}
-
-.container > div {
-    display:flex;
-    justify-content: space-between;
-}
-
-.container > div > img:last-child {
-    padding-left: 17vw;
-}
 
 .contactButton {
     background: #37595F;
@@ -230,59 +208,6 @@
     filter: blur(0px);
 }
 
-.popupHidden {
-    display: none;
-}
-
-.popup {
-    position: fixed;
-    top: 25%;
-    right: 35%;
-    z-index: 6;
-    background: #EEFBF6;
-    box-shadow: 0px 15px 55px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.popup h1 {
-    margin: 56px 27px 30px 27px;
-    font-family: Cookie;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 72px;
-    line-height: 79.4%;
-    text-align: center;
-    color: #4D7981;
-}
-
-.popup h2 {
-    margin: 30px 88px 33px 88px;
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 127%;
-    text-align: center;
-    color: #4D7981;
-}
-
-.popup button {
-    margin: 33px 56px 64px 56px;
-    width: 420px;
-    height: 60px;
-    background: #2A87CA;
-    border-radius: 5px;
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 100%;
-    color: #FFFFFF;
-}
-
 /*------------------------------------------------------with js-----------------------------------------------------------------------------------------*/
 
 .form input[red="yes"], .form textarea[red="yes"] {
@@ -352,9 +277,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .container>div img:last-of-type {
-        display: inline;
-    }
     .menuOpen>div {
         height: 100%;
     }
@@ -372,12 +294,6 @@
         width: 100%;
         height: 100%;
         z-index: 5;
-        padding: 0;
-    }
-    .head .container {
-        flex-direction: column;
-        align-items: flex-start;
-        height: 100%;
         padding: 0;
     }
     .head ul {
@@ -415,51 +331,3 @@
     }
 }
 
-@media only screen and (max-width: 600px) {
-    .popup {
-        position: fixed;
-        top: 25%;
-        right: 0%;
-        z-index: 6;
-        background: #EEFBF6;
-        box-shadow: 0px 15px 55px rgba(0, 0, 0, 0.25);
-        border-radius: 5px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 10px;
-    }
-    .popup h1 {
-        margin: 10px;
-        font-family: Cookie;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 60px;
-        line-height: 79.4%;
-        text-align: center;
-        color: #4D7981;
-    }
-    .popup h2 {
-        margin: 10px;
-        font-family: Open Sans;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 127%;
-        text-align: center;
-        color: #4D7981;
-    }
-    .popup button {
-        margin: 10px;
-        width: 90%;
-        height: 50px;
-        background: #2A87CA;
-        border-radius: 5px;
-        font-family: Open Sans;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 100%;
-        color: #FFFFFF;
-    }
-}

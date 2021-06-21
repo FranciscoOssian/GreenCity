@@ -18,7 +18,7 @@ function HomePage() {
     const [message, setMessage] = useState('');
     const [useRed, setUseRed] = useState(false);
     const [blur, setBlur] = useState(styles.notBlur);
-    const [popupHidden, setpopupHidden] = useState(styles.popupHidden)
+    const [popUpVisible, setPopUpVisible] = useState(false)
 
     const handleSubmit = (e) => {
         if( !name || !email || !message ){
@@ -27,7 +27,7 @@ function HomePage() {
             return e.preventDefault();
         }
         
-        setpopupHidden(styles.popup);
+        setPopUpVisible(true);
         setBlur(styles.blur)
         
         return e.preventDefault();
@@ -41,14 +41,12 @@ function HomePage() {
     </Head>
 
     <Popup
-        style={popupHidden}
-        callback = { () => { setBlur(styles.notBlur); setpopupHidden(styles.popupHidden); } }
+        callback = { () => { setBlur(styles.notBlur); setPopUpVisible(false); } }
+        visible={popUpVisible}
     />
 
     <div className={blur}>
     <div className={styles.app}>
-
-        
 
         <Header style={styles.head} />
 

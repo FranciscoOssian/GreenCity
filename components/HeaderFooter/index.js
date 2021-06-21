@@ -10,7 +10,30 @@ const OpenClose = styled.div`
 `
 
 const Container = styled.div`
-    
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    padding: 0 15px;
+    margin: 0 auto;
+    > div > img:nth-child(2) {
+        display: none;
+    }
+    > div {
+        display:flex;
+        justify-content: space-between;
+    }
+    > div > img:last-child {
+        padding-left: 17vw;
+    }
+    @media only screen and (max-width: 600px) {
+        > div img:last-of-type {
+            display: inline;
+        }
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100%;
+        padding: 0;
+    }
 `
 
 
@@ -22,8 +45,7 @@ const HeadFooter = ({ style }) => {
 
             <div className={style}>
 
-                <div className={styles.container}>
-
+                <Container>
                     <div>
                         <img src="/06-LOGO.png"></img>
                         {
@@ -44,8 +66,7 @@ const HeadFooter = ({ style }) => {
                         <li><Link href="/menu"><a>Cardápio</a></Link></li>
                         <li className={styles.contactButton}><Link href="/contact"><a>Contato</a></Link></li>
                     </ul>
-
-                </div>
+                </Container>
             </div>
         </div>
     )
