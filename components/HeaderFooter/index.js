@@ -17,13 +17,16 @@ const Container = styled.div`
     margin: 0 auto;
     > div > img:nth-child(2) {
         display: none;
+        padding-left: 17vw;
     }
     > div {
         display:flex;
-        justify-content: space-between;
-    }
-    > div > img:last-child {
-        padding-left: 17vw;
+        /*justify-content: space-between;*/
+        width: 40%;
+        /* height: 100%; */
+        text-align: center;
+        justify-content: center;
+        align-items: center;
     }
     @media only screen and (max-width: 600px) {
         > div img:last-of-type {
@@ -33,6 +36,11 @@ const Container = styled.div`
         align-items: flex-start;
         height: 100%;
         padding: 0;
+        > div > img:nth-child(1) {
+            padding: 0;
+            margin: 0;
+            margin-top: 15px;
+        }
     }
 `
 
