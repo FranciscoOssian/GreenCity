@@ -228,12 +228,19 @@
         margin: 15px;
         margin-bottom: 50px;
     }
+    .form{
+        display: flex;
+        flex-direction: column;
+    }
     .form input {
         width: 91.545189504vw;
         height: 40px;
     }
     .form textarea {
         width: 91.545189504vw;
+    }
+    .form img{
+        display: none;
     }
     .card {
         transition: 1s;
