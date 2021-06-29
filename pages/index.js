@@ -78,34 +78,45 @@ function HomePage() {
         <h1 className={styles.slogan}>Vem tomar um café<br/> com a gente</h1>
 
         <form id="contact" action="#" className={styles.form} onSubmit={handleSubmit}>
+
             <input
                 type="text"
                 id="name"
                 placeholder="Nome"
-                red={!name && useRed? "yes" : "none"}
                 onChange={ e => setName(e.target.value) }
             />
+            <img src="/errorForm.svg"
+                red={!name && useRed? "yes" : "none"}
+            ></img>
+
             <input
                 type="text"
                 id="email"
                 placeholder="Email"
-                red={!email && useRed? "yes" : "none"}
                 onChange={ e => setEmail(e.target.value) }
             />
+            <img src="/errorForm.svg"
+                red={!email && useRed? "yes" : "none"}
+            ></img>
+
             <textarea
                 name="message"
                 id="message"
                 cols="30"
                 rows="10"
                 placeholder="Mensagem"
-                red={!message && useRed? "yes" : "none"}
                 onChange={ e => setMessage(e.target.value) }
             ></textarea>
+            <img src="/errorForm.svg"
+                red={!message && useRed? "yes" : "none"}
+            ></img>
+
             <input
                 type="submit"
                 value="ENVIAR"
                 className={styles.btn1}
             />
+
         </form>
 
         <Footer style={styles.footer}/>

@@ -110,11 +110,10 @@
 }
 
 .form {
+    display: grid;
+    grid-template-columns: auto auto;
     transition: 0.4s;
-    display: flex;
     align-items: center;
-    flex-flow: column nowrap;
-    justify-content: space-between;
     padding-left: 35%;
     padding-right: 35%;
     height: 40%;
@@ -210,9 +209,11 @@
 
 /*------------------------------------------------------with js-----------------------------------------------------------------------------------------*/
 
-.form input[red="yes"], .form textarea[red="yes"] {
-    transition: 0.4s;
-    background-color: #fc9191;
+.form img[red="none"]{
+    visibility: hidden;
+}
+.fomr img[red="yes"]{
+    visibility: visible;
 }
 
 /*---------------------------------------------MOBILE-----------------------------------------------------------------------------------------*/
