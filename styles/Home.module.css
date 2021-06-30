@@ -4,7 +4,7 @@
 
 .app {
     background-image: url("https://raw.githubusercontent.com/FranciscoOssian/front-end-intern-test/master/assets/04-BG.png");
-    background-image: linear-gradient(0deg, #425f66 0%, #425f66 30%, rgba(0, 0, 0, 0) 100%), url("https://raw.githubusercontent.com/FranciscoOssian/front-end-intern-test/master/assets/04-BG.png");
+    background-image: linear-gradient(0deg, #425f66 0%, #425f66 30%, rgba(0, 0, 0, 0) 100%), url("/04-BG.png");
 }
 
 .head, .footer {
