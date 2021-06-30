@@ -29,6 +29,9 @@ const Container = styled.div`
         align-items: center;
     }
     @media only screen and (max-width: 600px) {
+        > div {
+            width: 100%;
+        }
         > div img:last-of-type {
             display: inline;
         }
